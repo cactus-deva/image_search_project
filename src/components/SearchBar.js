@@ -1,14 +1,14 @@
 import {useState} from "react"
 
-function SearchBar({onSubmit}) {
+function SearchBar({onSubmit}) {  
     const [term, setTerm] = useState("")
+
     const handleFormSubmit = (event) => {
         event.preventDefault()
-        onSubmit('candy')
+        onSubmit(term)
     }
 
     const handleOnChange = (event) => {
-        console.log("save this text to term state:", event.target.value);
         setTerm(event.target.value)
     }
   return (
